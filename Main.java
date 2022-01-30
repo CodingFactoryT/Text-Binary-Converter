@@ -49,14 +49,14 @@ public class Main {
 		
 		for(int i = 0; i < binaryNumbers.length; i++) {
 			try {
-				output += (char) Byte.parseByte(binaryNumbers[i], 2);
+				output += (char) Integer.parseInt(binaryNumbers[i], 2);
 			} catch(NumberFormatException nfe) {
 				containsIllegalCharacter_s = true;			
 			}
 		}
 		
 		if(containsIllegalCharacter_s) {
-			System.out.println("\nOne or more characters that are not in the ASCII-Table were used in the input String. \nThey are included in the Binary String, but were removed in the result! \n");
+			System.out.println("\nOne or more characters that are not included in the ASCII-Table were used in the input String. \nThey are included in the Original Binary String as an ANSI-representation, but were removed in the result! \n");
 		}
 		return output;
 	}
